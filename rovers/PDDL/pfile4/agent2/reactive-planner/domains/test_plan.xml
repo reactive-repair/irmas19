@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<define xmlns="http://www.pelea.org/xPddl" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.pelea.org/xPddl xPddl.xsd">
+  <plans name="xPddlPlan" domain="rover">
+    <plan planner="LAMA" id="xPddlPlan" domain="rover" 
+      problem="pfile9" n_actions="11" start_time="0.0" 
+      execution_time="11.0"> 
+      <action-plan name="NAVIGATE" start="0.0" duration="1.0" index="1"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="WAYPOINT4" type="WAYPOINT"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="SAMPLE_ROCK" start="1.0" duration="1.0" index="2"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="ROVER1STORE" type="STORE"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="COMMUNICATE_ROCK_DATA" start="2.0" duration="1.0" index="3"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="GENERAL" type="LANDER"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="SAMPLE_SOIL" start="3.0" duration="1.0" index="4"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="ROVER1STORE" type="STORE"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="NAVIGATE" start="4.0" duration="1.0" index="5"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="SAMPLE_SOIL" start="5.0" duration="1.0" index="6"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="ROVER1STORE" type="STORE"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="NAVIGATE" start="6.0" duration="1.0" index="7"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="COMMUNICATE_SOIL_DATA" start="7.0" duration="1.0" index="8"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="GENERAL" type="LANDER"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="SAMPLE_SOIL" start="8.0" duration="1.0" index="9"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="ROVER1STORE" type="STORE"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="COMMUNICATE_SOIL_DATA" start="9.0" duration="1.0" index="10"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="GENERAL" type="LANDER"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+      <action-plan name="COMMUNICATE_SOIL_DATA" start="10.0" duration="1.0" index="11"> 
+         <term name="ROVER1" type="ROVER"></term> 
+         <term name="GENERAL" type="LANDER"></term> 
+         <term name="WAYPOINT1" type="WAYPOINT"></term> 
+         <term name="WAYPOINT6" type="WAYPOINT"></term> 
+         <term name="WAYPOINT3" type="WAYPOINT"></term> 
+      </action-plan> 
+    </plan>
+  </plans> 
+</define> 

@@ -1,0 +1,66 @@
+; elevators-sequencedstrips-p8_3_2
+(define (problem pfile4)
+(:domain elevators-sequencedstrips)
+
+(:objects 
+n0 n1 n2 n3 n4 n5 n6 n7 n8  - count
+p0 p1 p2 p3  - passenger
+slow0 slow1 - agent
+)
+
+(:sensor 
+	(to slow0 allElevators) ; 
+	(to slow1 allElevators) ; 
+)
+
+(:init
+
+(above slow0 n0 n1) (above slow0 n0 n2) (above slow0 n0 n3) (above slow0 n0 n4) (above slow0 n0 n5) (above slow0 n0 n6) (above slow0 n0 n7) (above slow0 n0 n8) 
+(above slow0 n1 n2) (above slow0 n1 n3) (above slow0 n1 n4) (above slow0 n1 n5) (above slow0 n1 n6) (above slow0 n1 n7) (above slow0 n1 n8) 
+(above slow0 n2 n3) (above slow0 n2 n4) (above slow0 n2 n5) (above slow0 n2 n6) (above slow0 n2 n7) (above slow0 n2 n8) 
+(above slow0 n3 n4) (above slow0 n3 n5) (above slow0 n3 n6) (above slow0 n3 n7) (above slow0 n3 n8) 
+(above slow0 n4 n5) (above slow0 n4 n6) (above slow0 n4 n7) (above slow0 n4 n8) 
+(above slow0 n5 n6) (above slow0 n5 n7) (above slow0 n5 n8) 
+(above slow0 n6 n7) (above slow0 n6 n8) 
+(above slow0 n7 n8) 
+
+(lift-at slow0 n4)
+(enable-lift slow0)
+(reachable-floor slow0 n0)(reachable-floor slow0 n1)(reachable-floor slow0 n2)(reachable-floor slow0 n3)(reachable-floor slow0 n4)(reachable-floor slow0 n5)(reachable-floor slow0 n6)(reachable-floor slow0 n7)(reachable-floor slow0 n8)
+(status-door-working slow0 n0)(status-door-working slow0 n1)(status-door-working slow0 n2)
+(status-door-working slow0 n3)(status-door-working slow0 n4)(status-door-working slow0 n5)
+(status-door-working slow0 n6)(status-door-working slow0 n7)(status-door-working slow0 n8)
+
+
+
+(above slow1 n0 n1) (above slow1 n0 n2) (above slow1 n0 n3) (above slow1 n0 n4) (above slow1 n0 n5) (above slow1 n0 n6) (above slow1 n0 n7) (above slow1 n0 n8) 
+(above slow1 n1 n2) (above slow1 n1 n3) (above slow1 n1 n4) (above slow1 n1 n5) (above slow1 n1 n6) (above slow1 n1 n7) (above slow1 n1 n8) 
+(above slow1 n2 n3) (above slow1 n2 n4) (above slow1 n2 n5) (above slow1 n2 n6) (above slow1 n2 n7) (above slow1 n2 n8) 
+(above slow1 n3 n4) (above slow1 n3 n5) (above slow1 n3 n6) (above slow1 n3 n7) (above slow1 n3 n8) 
+(above slow1 n4 n5) (above slow1 n4 n6) (above slow1 n4 n7) (above slow1 n4 n8) 
+(above slow1 n5 n6) (above slow1 n5 n7) (above slow1 n5 n8) 
+(above slow1 n6 n7) (above slow1 n6 n8) 
+(above slow1 n7 n8) 
+
+(lift-at slow1 n7)
+(enable-lift slow1)
+(reachable-floor slow1 n0)(reachable-floor slow1 n1)(reachable-floor slow1 n2)(reachable-floor slow1 n3)(reachable-floor slow1 n4)(reachable-floor slow1 n5)(reachable-floor slow1 n6)(reachable-floor slow1 n7) (reachable-floor slow1 n8)
+(status-door-working slow1 n0)(status-door-working slow1 n1)(status-door-working slow1 n2)
+(status-door-working slow1 n3)(status-door-working slow1 n4)(status-door-working slow1 n5)
+(status-door-working slow1 n6)(status-door-working slow1 n7)(status-door-working slow1 n8)
+
+; ubicacion de los pasajeros
+(passenger-at p0 n6)
+(passenger-at p1 n6)
+(passenger-at p2 n5)
+(passenger-at p3 n6)
+)
+
+(:goal
+(and
+(passenger-at p0 n1)
+(passenger-at p1 n3)
+(passenger-at p2 n4)
+(passenger-at p3 n2)
+))
+)

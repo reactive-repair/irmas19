@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<define xmlns="http://www.pelea.org/xPddl">
+    <configuration>
+        <term value="NOT" name="TEMPORAL"/>
+        <term value="LAMA" name="PLANNER"/>
+        <term value="LPG-TD" name="REPLANNER"/>
+        <term value="NOT" name="LEARNING"/>
+        <term value="" name="COMMAND"/>
+        <term value="" name="COMMANDR"/>
+        <initialize>
+            <term value="domain.pddl" name="DOMAIN"/>
+            <term value="problem" name="PROBLEM"/>
+            <term value="" name="DOMAIN_PROBABILISTIC"/>
+            <term name="DOMAIN_LOW_LEVEL"/>
+            <term name="PROBLEM_LOW_LEVEL"/>
+        </initialize>
+        <execution>
+            <term value="true" name="SIMULATOR_SENSORS"/>
+            <term value="false" name="SIMULATOR_FILTER_OWN_FLUENTS"/>
+            <term value="false" name="SIMULATOR_DEBUG"/>
+            <term value="8000" name="SIMULATOR_CLOCKRATE"/>
+            <term value="true" name="SIMULATOR_FAILURE_STATUS"/>
+            <term value="37173" name="SIMULATOR_SEED"/>
+            <term value="0" name="SIMULATOR_FAILURE_TYPE"/>
+            <term value="-1,failure_rover0_1_1,-1,failure_rover0_1_2,-1,failure_rover0_1_3;-1,-1,-1,failure_rover0_5;-1,-1,-1,failure_rover0_6_1,failure_rover0_6_2,-1,-1,-1,failure_rover0_6_3" name="SIMULATOR_FAILURE_CONTENT"/>
+            <term value="1" name="SIMULATOR_TOTAL_ACTIONS"/>
+            <term value="0" name="SIMULATOR_FAILURE_START"/>
+            <term value="20" name="SIMULATOR_FAILURE_END"/>
+        </execution>
+    </configuration>
+</define>

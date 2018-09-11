@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><define xmlns="http://www.pelea.org/xPddl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pelea.org/xPddl xPddl.xsd"><plans domain="rover" name="xPddlPlan">
+<plan execution_time="6" start_time="0" n_actions="6" problem="pfile6" domain="rover" id="xPddlPlan">
+<action-plan duration="1" start="0" index="0" name="calibrate">
+	<term name="rover0" />
+	<term name="camera1" />
+	<term name="objective1" />
+	<term name="waypoint2" />
+</action-plan>
+<action-plan duration="1" start="1" index="1" name="take_image">
+	<term name="rover0" />
+	<term name="waypoint2" />
+	<term name="objective1" />
+	<term name="camera1" />
+	<term name="low_res" />
+</action-plan>
+<action-plan duration="1" start="2" index="2" name="communicate_image_data">
+	<term name="rover0" />
+	<term name="general" />
+	<term name="objective1" />
+	<term name="low_res" />
+	<term name="waypoint2" />
+	<term name="waypoint3" />
+</action-plan>
+<action-plan duration="1" start="3" index="3" name="sample_soil">
+	<term name="rover0" />
+	<term name="rover0store" />
+	<term name="waypoint2" />
+</action-plan>
+<action-plan duration="1" start="4" index="4" name="communicate_soil_data">
+	<term name="rover0" />
+	<term name="general" />
+	<term name="waypoint2" />
+	<term name="waypoint2" />
+	<term name="waypoint3" />
+</action-plan>
+<action-plan duration="1" start="5" index="5" name="dummyaction">
+</action-plan>
+</plan>
+</plans></define>

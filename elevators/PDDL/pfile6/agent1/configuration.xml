@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<define xmlns="http://www.pelea.org/xPddl">
+    <configuration>
+        <term value="NOT" name="TEMPORAL"/>
+        <term value="LAMA" name="PLANNER"/>
+        <term value="LPG-TD" name="REPLANNER"/>
+        <term value="NOT" name="LEARNING"/>
+        <term value="" name="COMMAND"/>
+        <term value="" name="COMMANDR"/>
+        <initialize>
+            <term value="domain.pddl" name="DOMAIN"/>
+            <term value="problem" name="PROBLEM"/>
+            <term name="DOMAIN_PROBABILISTIC"/>
+            <term name="DOMAIN_LOW_LEVEL"/>
+            <term name="PROBLEM_LOW_LEVEL"/>
+        </initialize>
+        <execution>
+            <term value="temporal" name="ENVIRONMENT"/>
+			<term value="true" name="DELIBERATIVE_PLANNER"/>
+            <term value="false" name="CENTRAL_PLANNER"/>
+            <term value="false" name="DS_ALLWAYS_REPLANN"/>
+            <term value="true" name="FILTER_OWN_FLUENTS"/>
+			<term value="true" name="GROUNDING_OWN_ACTIONS"/>
+        </execution>
+        <reactivePlanner>
+            <term value="5" name="RP_TYPE_EXECUTION"/>
+            <term value="slow0" name="AGENT_NAME"/>
+            <term value="elevators-sequencedstrips" name="DOMAIN_NAME"/>
+            <term value="reactive-planner/domains/" name="DOMAIN_PATH"/>
+            <term value="1" name="PROBLEM"/>
+            <term value="1" name="JOURNAL_RELEVANT_VARIABLES"/>
+            <term value="0.2899003" name="RP_MULT_LREQ_MEAN_TIME"/>
+            <term value="0.34" name="RP_MULT_LREQ_FACTOR"/>
+            <term value="3" name="RP_MODEL_VARIABLE_TO_ESTIMATE"/>
+            <term value="true" name="RP_EXECUTE_MODEL_IN_R"/>
+            <term value="true" name="RP_CONR_MODEL_PATH_CONF_FILE"/>
+            <term value="false" name="RP_GTS_PRINT_SEARCH_TREE"/>
+            <term value="/reactive-execution-model/graph/pfile6-slow0/" name="RP_GTS_PATH_PRINT"/>
+            <term value="1" name="RP_SS_TOTAL_PARTIAL"/>
+            <term value="2" name="RP_SS_EXECUTION_CYCLES"/>
+            <term value="3" name="RP_SS_FLUENTS_TO_REACH"/>
+            <term value="0" name="RP_SR_VERIFY_CONFLICTS"/>
+            <term value="0" name="RP_AP_VERIFY_CONFLICTS"/>
+            <term value="0" name="RP_MRT_VERIFY_CONFLICTS"/>
+            <term value="0" name="RP_TW_VERIFY_CONFLICTS"/>
+            <term value="0" name="RP_ACTIVATE_SERVICES"/>
+            <term value="0" name="RP_ACTIVATE_SINGLE_REPAIR"/>
+            <term value="0" name="RP_ACTIVATE_MULTI_PROTOCOL"/>
+            <term value="2" name="RP_TRANSLATING_ROOT_APPROACH"/>
+            <term value="1" name="RP_TRANSLATING_PUBLICIZES_APPROACH"/>
+            <term value="1" name="RP_TRANSLATING_FILTERING_EFFECTS"/>
+            <term value="0" name="RP_SEARCH_TREE_TYPE"/>
+            <term value="0.15" name="RP_MULT_ESTIMATING_TIME_ALFA"/>
+            <term value="1" name="RP_MULT_LREQ_ALFA"/>
+            <term value="0" name="RP_REPAIR_ACTIONS"/>
+            <term value="false" name="RP_ESTIMATING_SIZE_TIME_DIFFERENCES"/>
+            <term value="DEFAULT" name="RP_LREQ_NAME"/>
+            <term value="8" name="RP_EST_LREQ_TOTAL_PARAMS"/>
+            <term value="1.1216169" name="RP_MULT_LREQ_WEIGHT_A"/>
+            <term value="1" name="RP_MULT_LREQ_WEIGHT_D"/>
+            <term value="0.252047" name="RP_MULT_LREQ_WEIGHT_Rvar"/>
+            <term value="-0.071218" name="RP_MULT_LREQ_WEIGHT_DRvar"/>
+            <term value="0.174840" name="RP_MULT_LREQ_WEIGHT_RvarRoot"/>
+            <term value="-0.024709" name="RP_MULT_LREQ_WEIGHT_FluentsRoot"/>
+            <term value="-0.089607" name="RP_MULT_LREQ_WEIGHT_Producers"/>
+            <term value="0.129762" name="RP_MULT_LREQ_WEIGHT_ProducersU"/>
+            <term value="127.0.0.1" name="RP_CONR_SERVER_IP"/>
+            <term value="R CMD /home/anubis/R/i486-pc-linux-gnu-library/2.15/Rserve/libs/Rserve" name="RP_CONR_SERVER_START"/>
+            <term value="reactive-planner/training-the-models/" name="RP_CONR_MODEL_PATH"/>
+            <term value="6311" name="RP_CONR_SERVER_PORT"/>
+            <term value="model_time_rf_ntree100_mtry3_rover-regressed-all-filtering-pre-window.rda" name="RP_CONR_MODEL"/>
+            <term value="randomForest" name="RP_CONR_MODEL_TYPE"/>
+        </reactivePlanner>
+        <learner>
+            <term value="roller/cabala/sayphi-rules" name="NAME"/>
+            <term value="/usr/share/tomcat6/webapps/axis2/learning/knowledge.zip" name="output"/>
+            <term value="ADDITIVE" name="mode"/>
+        </learner>
+    </configuration>
+</define>
